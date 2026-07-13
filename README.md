@@ -67,6 +67,7 @@
 | [Pipecat](https://github.com/pipecat-ai/pipecat) | open-source pipeline framework for voice AI |
 | [Retell AI](https://www.retellai.com/) | hosted voice agent — telephony-first |
 | [Bland AI](https://bland.ai/) | hosted voice agent — focused on phone calls |
+| [Hermes](https://www.buildwithhermes.com/) | white-label voice agent platform for agencies, with CRM, campaigns and client billing built in |
 | [Daily.co Bots](https://www.daily.co/products/voice-and-video-bots/) | conversation infrastructure for voice bots |
 
 ## Open-source models
