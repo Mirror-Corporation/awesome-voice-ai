@@ -68,6 +68,7 @@
 | [Retell AI](https://www.retellai.com/) | hosted voice agent — telephony-first |
 | [Bland AI](https://bland.ai/) | hosted voice agent — focused on phone calls |
 | [Daily.co Bots](https://www.daily.co/products/voice-and-video-bots/) | conversation infrastructure for voice bots |
+| [Workforce Wave](https://www.workforcewave.com/) | hosted AI voice receptionist | telephony-first 24/7 call answering, appointment booking, and lead capture for SMBs |
 
 ## Open-source models
 
