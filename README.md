@@ -88,6 +88,7 @@
 
 | Product | Category | Note |
 |---|---|---|
+| [Kalyvox](https://kalyvox.ai/en/ai-answering-service) | AI receptionist | inbound call handling, qualification, appointment booking, and call transfers for SMBs |
 | [Mirror](https://mirror-ai.app) | digital immortality, heritage voice | shipping today; we make it |
 | [Suno](https://suno.com/) | voice-to-song generation | the standard for AI music |
 | [Udio](https://www.udio.com/) | AI music generation | strongest competitor to Suno |
