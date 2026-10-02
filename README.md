@@ -46,6 +46,7 @@
 | [XTTS-v2](https://huggingface.co/coqui/XTTS-v2) | open multilingual voice clone | zero-shot voice cloning from a 6-second sample |
 | [F5-TTS](https://github.com/SWivid/F5-TTS) | open flow-matching TTS | fast, expressive, easy fine-tuning |
 | [OpenVoice](https://github.com/myshell-ai/OpenVoice) | open voice cloning | tone + accent + emotion controls |
+| [Gradium](https://gradium.ai/) | hosted TTS + voice cloning | streams text and audio over WebSocket for conversational apps |
 
 ## Speech recognition (ASR)
 
