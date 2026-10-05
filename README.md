@@ -68,6 +68,7 @@
 | [Retell AI](https://www.retellai.com/) | hosted voice agent — telephony-first |
 | [Bland AI](https://bland.ai/) | hosted voice agent — focused on phone calls |
 | [Daily.co Bots](https://www.daily.co/products/voice-and-video-bots/) | conversation infrastructure for voice bots |
+| [AI Group Call](https://aigroupcall.app) | Facilitate a live AI panel: agents answer one at a time, build on each other, and leave notes and action items after the call. |
 
 ## Open-source models
 
