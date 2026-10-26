@@ -1,150 +1,110 @@
-<div align="center">
-
 # Awesome Voice AI
 
-[![Awesome](https://img.shields.io/badge/Awesome-Voice_AI-E8C98A?style=for-the-badge&labelColor=0B0B0C&logo=awesomelists)](https://github.com/Mirror-Corporation/awesome-voice-ai)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-6EA8FF?style=for-the-badge&labelColor=0B0B0C)](#contributing)
-[![maintained by](https://img.shields.io/badge/maintained_by-Mirror_Corporation-F4F4EF?style=for-the-badge&labelColor=0B0B0C)](https://github.com/Mirror-Corporation)
+**A reading list for people building conversations with a voice.**
 
-**A curated list of voice AI: tools, models, datasets, papers, products, and ideas.**
-*Maintained by [Mirror Corporation](https://github.com/Mirror-Corporation) — we live in this space.*
+Speech synthesis, recognition, conversation frameworks, datasets, memory and research. Maintained by [Mirror AI](https://github.com/Mirror-Corporation).
 
-</div>
+Entries link to the projects' own pages. Inclusion does not identify Mirror's suppliers or imply an endorsement. Descriptions are intentionally factual; availability and licences can change.
 
-<br/>
+[Speech synthesis](#speech-synthesis) · [Recognition](#speech-recognition) · [Agents](#conversation-frameworks-and-platforms) · [Datasets](#datasets) · [Memory](#memory-and-retrieval) · [Research](#research) · [Safety](#ethics-and-provenance)
 
-> **Scope.** Voice cloning, TTS, ASR, voice agents, voice memory, voice-first UX.
-> **Bias.** Things we have used, products we have shipped against, papers we have read.
-> **Not on this list.** Generic LLM tooling, image generation, anything without a voice angle.
+> **Link checks:** see [the per-link report](./LINK_CHECK.md). “Not verified” means the checker could not establish the destination's content; it does not mean the link is broken.
 
-<br/>
+## Speech synthesis
 
-## Contents
+Text-to-speech (TTS) turns text into spoken audio.
 
-- [Text-to-speech & voice cloning](#text-to-speech--voice-cloning)
-- [Speech recognition (ASR)](#speech-recognition-asr)
-- [Voice agents & runtimes](#voice-agents--runtimes)
-- [Open-source models](#open-source-models)
-- [Datasets](#datasets)
-- [Voice-first products](#voice-first-products)
-- [Memory & retrieval for voice](#memory--retrieval-for-voice)
-- [Research & papers](#research--papers)
-- [Ethics & safety](#ethics--safety)
-- [Communities](#communities)
-- [Contributing](#contributing)
+| Project | What to explore |
+| :--- | :--- |
+| [ElevenLabs](https://elevenlabs.io/) | Speech synthesis and voice tools. |
+| [PlayHT](https://play.ht/) | Hosted speech synthesis. **Not verified:** the check returned a gateway error. |
+| [Cartesia](https://www.cartesia.ai/sonic) | Sonic speech synthesis. |
+| [Coqui TTS](https://github.com/coqui-ai/TTS) | A speech synthesis toolkit; check the repository's maintenance status and licence. |
+| [XTTS-v2](https://huggingface.co/coqui/XTTS-v2) | A multilingual speech model; review the model licence before use. |
+| [F5-TTS](https://github.com/SWivid/F5-TTS) | Speech synthesis based on flow matching. |
+| [OpenVoice](https://github.com/myshell-ai/OpenVoice) | Voice conversion and style control. |
 
-<br/>
+## Speech recognition
 
-## Text-to-speech & voice cloning
+Automatic speech recognition (ASR) turns audio into text.
 
-| Tool | What it is | Why it matters |
-|---|---|---|
-| [ElevenLabs](https://elevenlabs.io/) | hosted TTS + voice cloning | current quality leader for emotional control |
-| [PlayHT](https://play.ht/) | hosted TTS | strong multilingual, low latency |
-| [Cartesia · Sonic](https://cartesia.ai/sonic) | low-latency TTS | sub-100ms first audio, best-in-class for live agents |
-| [Coqui TTS](https://github.com/coqui-ai/TTS) | open-source TTS toolkit | the go-to self-host TTS for many years |
-| [XTTS-v2](https://huggingface.co/coqui/XTTS-v2) | open multilingual voice clone | zero-shot voice cloning from a 6-second sample |
-| [F5-TTS](https://github.com/SWivid/F5-TTS) | open flow-matching TTS | fast, expressive, easy fine-tuning |
-| [OpenVoice](https://github.com/myshell-ai/OpenVoice) | open voice cloning | tone + accent + emotion controls |
+| Project | What to explore |
+| :--- | :--- |
+| [Whisper](https://github.com/openai/whisper) | Speech recognition models and reference implementation. |
+| [whisper.cpp](https://github.com/ggml-org/whisper.cpp) | A C/C++ implementation of Whisper. |
+| [faster-whisper](https://github.com/SYSTRAN/faster-whisper) | Whisper inference using CTranslate2. |
+| [Distil-Whisper](https://github.com/huggingface/distil-whisper) | Distilled speech recognition models. |
+| [Deepgram](https://deepgram.com/) | Hosted speech recognition. |
+| [AssemblyAI](https://www.assemblyai.com/) | Speech recognition and audio analysis. |
 
-## Speech recognition (ASR)
+## Conversation frameworks and platforms
 
-| Tool | What it is |
-|---|---|
-| [Whisper](https://github.com/openai/whisper) | OpenAI's open ASR — the baseline everyone benchmarks against |
-| [Whisper.cpp](https://github.com/ggerganov/whisper.cpp) | C/C++ port of Whisper — runs on consumer hardware |
-| [Faster Whisper](https://github.com/SYSTRAN/faster-whisper) | optimized Whisper with CTranslate2 — 4× speedup |
-| [Deepgram](https://deepgram.com/) | hosted ASR — best latency on streaming |
-| [AssemblyAI](https://www.assemblyai.com/) | hosted ASR + speaker diarization + sentiment |
-| [Distil-Whisper](https://github.com/huggingface/distil-whisper) | smaller, faster Whisper — 6× smaller, 5× faster |
-
-## Voice agents & runtimes
-
-| Tool | What it is |
-|---|---|
-| [LiveKit Agents](https://docs.livekit.io/agents/) | open framework for real-time voice agents over WebRTC |
-| [Vapi](https://vapi.ai/) | hosted voice agent platform — fast prototyping |
-| [Pipecat](https://github.com/pipecat-ai/pipecat) | open-source pipeline framework for voice AI |
-| [Retell AI](https://www.retellai.com/) | hosted voice agent — telephony-first |
-| [Bland AI](https://bland.ai/) | hosted voice agent — focused on phone calls |
-| [Daily.co Bots](https://www.daily.co/products/voice-and-video-bots/) | conversation infrastructure for voice bots |
-
-## Open-source models
-
-- [Llama 3 family](https://llama.meta.com/) — Meta, the strongest open chat backbone
-- [Qwen 2 / Qwen 2.5](https://github.com/QwenLM/Qwen2) — Alibaba, strong multilingual reasoning
-- [DeepSeek-V3](https://github.com/deepseek-ai/DeepSeek-V3) — best open reasoning model of 2025
-- [Mistral Small / Large](https://mistral.ai/) — solid open-weight European alternative
+| Project | What to explore |
+| :--- | :--- |
+| [LiveKit Agents](https://docs.livekit.io/agents/) | A framework for real-time agents. |
+| [Pipecat](https://github.com/pipecat-ai/pipecat) | A framework for voice and multimodal conversation. |
+| [Daily](https://www.daily.co/) | Real-time communication tools and the team behind Pipecat. |
+| [Vapi](https://vapi.ai/) | A hosted voice agent platform. |
+| [Retell AI](https://www.retellai.com/) | A platform for voice agents and phone conversations. |
+| [Bland AI](https://www.bland.ai/) | A platform for phone-based AI agents. |
 
 ## Datasets
 
-- [LibriTTS](https://www.openslr.org/60/) — 585h English audiobook speech, multi-speaker
-- [Common Voice](https://commonvoice.mozilla.org/) — Mozilla's multilingual crowdsourced speech corpus
-- [VoxCeleb 1/2](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/) — celebrity voices for speaker recognition
-- [VCTK](https://datashare.ed.ac.uk/handle/10283/3443) — 110 English speakers, studio quality
-- [LJSpeech](https://keithito.com/LJ-Speech-Dataset/) — 13k clips, single speaker — the TTS hello-world
+Check the source's terms and the rights associated with the recordings before using a dataset.
 
-## Voice-first products
+| Dataset | Material |
+| :--- | :--- |
+| [LibriTTS](https://www.openslr.org/60/) | Audiobook speech for synthesis research. |
+| [Common Voice](https://commonvoice.mozilla.org/) | Contributed speech recordings. **Not verified:** only a JavaScript shell was readable. |
+| [VoxCeleb](https://www.robots.ox.ac.uk/~vgg/data/voxceleb/) | Speech data for speaker recognition research. |
+| [VCTK](https://datashare.ed.ac.uk/items/30e7453c-9ea8-48b4-8e18-f96d0dc62928) | A corpus of speakers reading text. |
+| [LJ Speech](https://keithito.com/LJ-Speech-Dataset/) | A speech corpus with transcripts. |
 
-| Product | Category | Note |
-|---|---|---|
-| [Mirror](https://mirror-ai.app) | digital immortality, heritage voice | shipping today; we make it |
-| [Suno](https://suno.com/) | voice-to-song generation | the standard for AI music |
-| [Udio](https://www.udio.com/) | AI music generation | strongest competitor to Suno |
-| [Pi (Inflection)](https://pi.ai/) | voice companion | one of the first voice-native AI products |
-| [Friend / Limitless](https://www.limitless.ai/) | wearable voice memory | continuous capture + recall |
+## Voice and audio products
 
-## Memory & retrieval for voice
+| Product | What to explore |
+| :--- | :--- |
+| [Mirror AI](https://mirror-ai.app) | Our product: historical personalities as AI reconstructions, real-time voice, free letters and memory. Characters speak Russian and can make mistakes. |
+| [Suno](https://suno.com/) | Music generation with vocals. |
+| [Udio](https://www.udio.com/) | Music generation. **Not verified:** no readable page content was returned. |
+| [Pi](https://pi.ai/) | A conversational assistant. **Not verified:** the destination returned a minimal interface; voice availability was not established. |
 
-- [Mem0](https://github.com/mem0ai/mem0) — open long-term memory layer for AI agents
-- [Zep](https://github.com/getzep/zep) — long-term memory + retrieval for chat & voice
-- [LangMem](https://github.com/langchain-ai/langmem) — memory primitives for LangGraph
-- [Chroma](https://www.trychroma.com/) — open vector DB, common backend
-- [LanceDB](https://lancedb.com/) — embedded vector DB, fast for local
+## Memory and retrieval
 
-## Research & papers
+These are general tools that can support a conversational application.
 
-- 📄 **NaturalSpeech 3 (2024)** — factorized diffusion for prosody
-- 📄 **StyleTTS 2 (2023)** — diffusion for expressive TTS
-- 📄 **Voicebox (Meta, 2023)** — text-guided multilingual generation
-- 📄 **AudioLM (Google, 2022)** — language modeling for audio
-- 📄 **NaturalSpeech 2 (Microsoft, 2023)** — latent diffusion TTS
-- 📄 **SoundStream (Google, 2021)** — the codec underneath modern audio LMs
+- [Mem0](https://github.com/mem0ai/mem0) — memory for AI applications.
+- [Zep](https://github.com/getzep/zep) — context and memory tools.
+- [LangMem](https://github.com/langchain-ai/langmem) — tools for long-term memory.
+- [Chroma](https://www.trychroma.com/) — embeddings and retrieval.
+- [LanceDB](https://www.lancedb.com/) — vector search and data storage.
 
-## Ethics & safety
+## Research
 
-- [Partnership on AI — Synthetic Media](https://partnershiponai.org/workstream/synthetic-media/)
-- [Coalition for Content Provenance and Authenticity (C2PA)](https://c2pa.org/)
-- [DeepMedia Audio Detection](https://www.deepmedia.ai/)
-- *On consent and the right to your own voice — see [Mirror Manifesto §VI](https://github.com/Mirror-Corporation/manifesto#vi--what-we-will-not-do).*
+Foundational reading, rather than a ranking of current systems. Links go to the authors' papers.
+
+- [NaturalSpeech 3](https://arxiv.org/abs/2403.03100) — speech synthesis with a factorized codec and diffusion.
+- [StyleTTS 2](https://arxiv.org/abs/2306.07691) — style diffusion for speech synthesis.
+- [Voicebox](https://arxiv.org/abs/2306.15687) — text-guided speech generation.
+- [AudioLM](https://arxiv.org/abs/2209.03143) — language modelling for audio generation.
+- [NaturalSpeech 2](https://arxiv.org/abs/2304.09116) — latent diffusion for speech and singing synthesis.
+- [SoundStream](https://arxiv.org/abs/2107.03312) — a neural audio codec.
+
+## Ethics and provenance
+
+- [Partnership on AI — Responsible Practices for Synthetic Media](https://syntheticmedia.partnershiponai.org/) — guidance on consent, disclosure and transparency.
+- [C2PA](https://c2pa.org/) — content provenance specifications.
+- [DeepMedia](https://www.deepmedia.ai/) — synthetic media detection. **Not verified:** the checker could not read the site.
+- [Mirror Manifesto](https://github.com/Mirror-Corporation/manifesto) — our approach to research, reconstruction and honest limits.
 
 ## Communities
 
-- [Hugging Face — Audio](https://huggingface.co/audio)
-- [LAION Discord — Audio](https://discord.gg/laion)
-- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/)
-
-<br/>
+- [Hugging Face Audio](https://huggingface.co/audio) — **not verified** by the checker.
+- [LAION Discord](https://discord.gg/laion) — **not verified** by the checker.
+- [r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/) — discussion of local models, including audio projects.
 
 ## Contributing
 
-Pull requests welcome. **Rules:**
+Suggest a project with an official source and a short explanation of its relevance to voice. Disclose your affiliation. Avoid rankings, unsupported performance numbers and claims about which services Mirror uses.
 
-1. Each entry needs **a one-line "why it matters."** No marketing copy.
-2. We don't accept paid placements.
-3. If you submit a product you built — say so in the PR.
-4. If we remove your entry, we'll say why in the commit.
-
-Open an issue if you disagree with a removal — we read everything.
-
-<br/>
-
----
-
-<div align="center">
-
-<sub><b>Awesome Voice AI</b> · maintained by <a href="https://github.com/Mirror-Corporation">Mirror Corporation</a></sub>
-<br/>
-<sub><a href="https://mirror-ai.app">mirror-ai.app</a> · <a href="mailto:aimirror630@gmail.com">aimirror630@gmail.com</a></sub>
-
-</div>
+[Mirror on GitHub →](https://github.com/Mirror-Corporation) · [Open Mirror AI](https://mirror-ai.app/app/)
