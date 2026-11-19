@@ -47,6 +47,7 @@ Automatic speech recognition (ASR) turns audio into text.
 | [Vapi](https://vapi.ai/) | A hosted voice agent platform. |
 | [Retell AI](https://www.retellai.com/) | A platform for voice agents and phone conversations. |
 | [Bland AI](https://www.bland.ai/) | A platform for phone-based AI agents. |
+| [Agora](https://docs.agora.io/en/introduction) | SDKs and APIs for building real-time voice agents. |
 
 ## Datasets
 
